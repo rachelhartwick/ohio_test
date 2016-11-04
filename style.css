@@ -1,0 +1,30 @@
+body {background-color: #0029ff
+
+}
+
+p {
+		font-size: 16px;
+		font: Arial;
+}
+
+.center {
+	text-align: center;
+}
+
+div {
+	width: 96%;
+	background-color: #48bb97;
+	margin-top: 0 auto;
+	padding-top: 200px;
+	font-size: 2em; 
+}
+
+@media (min-width: 768px) {
+div {
+	width: 48%;
+	background-color: #48bb97;
+	margin-top: 1%;
+	padding-top: 100px;
+	font-size: 3em; 
+	float: left;
+}
