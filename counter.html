@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/counter.css">
+</head>
+<body>
+
+	<div class="catcounter">
+		<img id="bill" img src="http://placekitten.com/200/300">
+
+		<h2>Welcome to kitten town</h2>
+
+
+		<div>
+		<button id="decrease"> - </button>
+		<button id="increase"> + </button>
+		</div>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+
+
+		var picIndex= 500;
+
+	$('button').click(function(){
+		if($(this).attr('id')==='increase' ){
+			picIndex = picIndex + 1;
+		} else {
+			picIndex = picIndex - 1;
+
+		}
+		$('h1').text(picIndex)
+
+		var url = "http://placekitten.com/200/" + picIndex;
+
+		$('#bill').attr('src', url);
+s
+		});
+
+
+	</script>
+
+</body>
+</html>
