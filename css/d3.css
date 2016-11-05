@@ -1,0 +1,11 @@
+body {
+	background-color: green;
+}
+
+.bar {
+	background-color: white;
+	display: inline-block;
+	width: 20px;
+
+
+}

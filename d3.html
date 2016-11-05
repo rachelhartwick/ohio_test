@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>d3 training</title>
+	<link rel="stylesheet" type="text/css" href="css/d3.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+
+</head>
+<body>
+
+ <!-- <div id="ChartArea"></div> -->
+ <div id="chartArea"></div>
+
+	<script type="text/javascript">
+
+	var dataset = [5, 10, 15, 20, 25];
+
+	var svg = d3.select('#chartArea').append('svg')
+		.attr('width', 200)
+		.attr('height', 300);
+
+	var multiplier = 8;
+
+	svg.selectAll('rect')
+		.data(dataset)
+		.enter()
+		.append('rect')
+		.attr('class', 'bar')
+		.attr('x', function(d, i){
+			return i * 22
+
+		})
+		.attr ('y', function(d){
+			return 300 - d * multiplier;
+	
+		})
+		.attr('width', 5)
+		.style ('height', function(d){
+			return d * multiplier
+
+		});
+
+
+
+	d3.select('body').selectAll('div')
+		.data(dataset) 
+		.enter()
+		.append('div')
+		.attr('class', 'bar')
+		.style('height', function(d){
+			return d * 5 + 'px';
+		
+		});
+
+	</script>
+
+
+</body>
+</html>
